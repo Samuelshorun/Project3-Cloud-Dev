@@ -19,21 +19,19 @@ spec:
         - containerPort: 80
         resources:
           limits:
-            cpu: 2000Mi
-          requests:
             cpu: 500m
+          requests:
+            cpu: 200m
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    service: reverseproxy
-  name: reverseproxy
+  name: udagram-reverseproxy
 spec:
   ports:
-  - name: "8080"
-    port: 8080
+  - port: 8080
+    name: "8080"
     targetPort: 8080
   selector:
-    service: reverseproxy
+    service: udagram-reverseproxy
