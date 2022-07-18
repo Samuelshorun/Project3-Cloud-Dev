@@ -19,9 +19,9 @@ spec:
         - containerPort: 80
         resources:
           limits:
-            cpu: 2000Mi
-          requests:
             cpu: 500m
+          requests:
+            cpu: 200m
 
 ---
 apiVersion: v1
