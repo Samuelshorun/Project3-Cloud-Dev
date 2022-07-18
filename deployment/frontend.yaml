@@ -27,13 +27,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: udagram-frontend
+  name: frontend
   labels:
-    run: udagram-frontend
+    run: frontend
 spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 80
   selector:
-    run: udagram-frontend
+    run: frontend
